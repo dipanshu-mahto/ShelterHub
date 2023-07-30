@@ -15,7 +15,7 @@ const Search = ({ properties }) => {
 console.log(router.query.purpose)
   return (
     <Box>
-     {router.route && !router.query && <Flex
+     {router.route === '/search' && !router.query.purpose  && <Flex
         onClick={() => setSearchFilters(!searchFilters)}
         cursor='pointer'
         bg='whitesmoke'

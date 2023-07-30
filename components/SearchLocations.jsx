@@ -42,7 +42,7 @@ export default function SearchFilters() {
       }
     })
 
-    router.push({ pathname: path+'/search', query: query });
+    router.push({ pathname: path+'search', query: query });
   };
 
   
