@@ -1,28 +1,24 @@
 import { useEffect, useState } from 'react';
-import { Flex, Select, Box, Text, Input, Spinner, Icon, Button } from '@chakra-ui/react';
+import { Flex, Select, Box} from '@chakra-ui/react';
 import { useRouter } from 'next/router';
-import { MdCancel } from 'react-icons/md';
-import Image from 'next/image';
 
 import { filterData, getFilterValues } from '../utils/filterData';
 import { baseUrl, fetchApi } from '../utils/fetchApi';
-import noresult from '../assets/images/noresult.svg';
-import SearchLocations from './SearchLocations';
 
 export default function SearchFilters() {
   const [filters] = useState(filterData);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [locationData, setLocationData] = useState();
-  const [showLocations, setShowLocations] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [searchTerm] = useState('');
+  //const [locationData, setLocationData] = useState();
+  
+ // const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     if (searchTerm !== '') {
       const fetchData = async () => {
-        setLoading(true);
+       // setLoading(true);
         const data = await fetchApi(`${baseUrl}/auto-complete?query=${searchTerm}`);
-        setLoading(false);
-        setLocationData(data?.hits);
+      //  setLoading(false);
+       // setLocationData(data?.hits);
       };
 
       fetchData();

@@ -1,8 +1,6 @@
 import Link from 'next/link';
-import { Menu, MenuButton, MenuList, MenuItem, IconButton, Flex, Box, Spacer, Center } from '@chakra-ui/react';
-import { FcMenu, FcHome, FcAbout, FcAddImage, FcDatabase, FcGrid, FcFilledFilter } from 'react-icons/fc';
-import { BsSearch } from 'react-icons/bs';
-import { FiKey } from 'react-icons/fi';
+import { Flex, Box, Spacer} from '@chakra-ui/react';
+import {  FcHome, FcAbout, FcFilledFilter } from 'react-icons/fc';
 
 const Navbar = () => (
   <Flex p='2' borderBottom='1px' borderColor='gray.100' justify='space-between'>

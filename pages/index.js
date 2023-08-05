@@ -11,7 +11,7 @@ export const Banner = ({ purpose, title1, title2, desc1, desc2, buttonText, link
  <SearchLocations />
   <Flex flexWrap='wrap' justifyContent='center' alignItems='center' m='10'>
    
-    <Image src={imageUrl} width={500} height={300} />
+    <Image src={imageUrl} width={500} height={300} alt='cover-photo'/>
     <Box p='5'>
       <Text color='gray.500' fontSize='sm' fontWeight='medium'>{purpose}</Text>
       <Text fontSize='3xl' fontWeight='bold'>{title1}<br />{title2}</Text>
@@ -25,7 +25,7 @@ export const Banner = ({ purpose, title1, title2, desc1, desc2, buttonText, link
 );
 
 
-const Home = ({ propertiesForSale, propertiesForRent }) => (
+const Home = ({ propertiesForRent }) => (
   <Box>
     <Banner
       purpose='RENT A HOME'
