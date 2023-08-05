@@ -1,29 +1,29 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Flex, Select, Box} from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 
 import { filterData, getFilterValues } from '../utils/filterData';
-import { baseUrl, fetchApi } from '../utils/fetchApi';
+//import { baseUrl, fetchApi } from '../utils/fetchApi';
 
 export default function SearchFilters() {
   const [filters] = useState(filterData);
-  const [searchTerm] = useState('');
-  //const [locationData, setLocationData] = useState();
+//   const [searchTerm] = useState('');
+//  const [locationData, setLocationData] = useState();
   
- // const [loading, setLoading] = useState(false);
+//  const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    if (searchTerm !== '') {
-      const fetchData = async () => {
-       // setLoading(true);
-        const data = await fetchApi(`${baseUrl}/auto-complete?query=${searchTerm}`);
-      //  setLoading(false);
-       // setLocationData(data?.hits);
-      };
+//   useEffect(() => {
+//     if (searchTerm !== '') {
+//       const fetchData = async () => {
+//        // setLoading(true);
+//         const data = await fetchApi(`${baseUrl}/auto-complete?query=${searchTerm}`);
+//       //  setLoading(false);
+//         setLocationData(data?.hits);
+//       };
 
-      fetchData();
-    }
-  }, [searchTerm]);
+//       fetchData();
+//     }
+//   }, [searchTerm]);
   const router = useRouter();
 
   const searchProperties = (filterValues) => {
